@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: flow
+  datasource:
+    url: jdbc:mysql://localhost:3306/flowable?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&tinyInt1isBit=false&allowMultiQueries=true&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+  main:
+    allow-bean-definition-overriding: true #当遇到同样名字的时候，是否允许覆盖注册
+server:
+  port: 7777
+
+management:
+  endpoint:
+    flowable:
+      enabled:  true
+
+logging:
+  level:
+    org:
+      flowable: debug
+
